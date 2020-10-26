@@ -12,7 +12,7 @@ export const Add = () => {
           .then((res) =>{
               res.json()
           }).then( (data) =>{
-              console.log(data);
+              console.log(data)
           });
     }
     return (
@@ -23,7 +23,7 @@ export const Add = () => {
                         <input type='text' 
                             placeholder="Search for a movie" 
                             value ={query}
-                            onChange={(event) => onChange(event)}
+                            onChange={(e)=>onChange(e)}
                         />
                     </div>
                 </div>

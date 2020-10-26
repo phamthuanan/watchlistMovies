@@ -6,13 +6,14 @@ export const Add = () => {
     const onChange = (e) =>{
         e.preventDefault();
         setQuery(e.target.value);
+        console.log(query)
         fetch(
             `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&query=${e.target.value}&page=1&include_adult=false`
           )
           .then((res) =>{
               res.json()
           }).then( (data) =>{
-              console.log(data);
+              console.log(data)
           });
     }
     return (

@@ -11,8 +11,9 @@ export const Add = () => {
           )
           .then((res) =>{
               res.json()
+              console.log(res.json())
           }).then( (data) =>{
-              console.log(data);
+              console.log(data)
           });
     }
     return (

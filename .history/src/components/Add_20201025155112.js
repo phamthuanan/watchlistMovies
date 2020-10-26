@@ -7,13 +7,8 @@ export const Add = () => {
         e.preventDefault();
         setQuery(e.target.value);
         fetch(
-            `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&query=${e.target.value}&page=1&include_adult=false`
+            `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
           )
-          .then((res) =>{
-              res.json()
-          }).then( (data) =>{
-              console.log(data);
-          });
     }
     return (
         <div className="add-page">
@@ -23,7 +18,7 @@ export const Add = () => {
                         <input type='text' 
                             placeholder="Search for a movie" 
                             value ={query}
-                            onChange={(event) => onChange(event)}
+                            onChange={onChange}
                         />
                     </div>
                 </div>

@@ -9,7 +9,7 @@ import {
 import {Header} from './components/Header'
 import {Watchlist} from './components/Watchlist'
 import {Add} from './components/Add'
-import {Watched} from './components/Watched'
+import {Watched} from './components/Watchlist'
 import './lib/font-awesome/css/all.min.css'
 function App() {
   return (
