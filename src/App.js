@@ -11,9 +11,11 @@ import {Watchlist} from './components/Watchlist'
 import {Add} from './components/Add'
 import {Watched} from './components/Watched'
 import './lib/font-awesome/css/all.min.css'
+import {GlobalProvider} from './context/GlobalState'
 function App() {
   return (
-    <Router>
+    <GlobalProvider>
+      <Router>
       <Header />
       <Switch>
         <Route exact path="/">
@@ -30,6 +32,8 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </GlobalProvider>
+    
     
   );
 }
